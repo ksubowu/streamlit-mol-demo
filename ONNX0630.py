@@ -858,7 +858,7 @@ import torch.onnx
 import onnx
 import onnxruntime as ort
 # onnx_model_path = "/nfs_home/bowen/works/pys/codes/i2m/I2M_R4.onnx"#20250605
-onnx_model_path="I2M_R4.onnx"
+onnx_model_path="./I2M_R4.onnx"
 def image_to_tensor2(image_path):
     # img_path="/cadd_data/samba_share/from_docker/data/work_space/ori/real/acs/op300209p-Scheme-c2-4.png"
     img_path= image_path

@@ -6,7 +6,7 @@ import os
 import urllib.request
 
 model_url = "https://huggingface.co/spaces/wuzxmu/I2Mdemo/resolve/main/I2M_R4.onnx"
-model_path = "I2M_R4.onnx"
+model_path = "./I2M_R4.onnx"
 
 if not os.path.exists(model_path):
     urllib.request.urlretrieve(model_url, model_path)
