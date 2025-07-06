@@ -5,11 +5,16 @@ from ONNX0630 import predict_smiles  # 你要封装这个函数
 import os
 import urllib.request
 
-model_url = "https://huggingface.co/spaces/wuzxmu/I2Mdemo/resolve/main/I2M_R4.onnx"
-model_path = "./I2M_R4.onnx"
+import urllib.request
 
+model_url = "https://huggingface.co/spaces/wuzxmu/I2Mdemo/resolve/main/I2M_R4.onnx"
+model_path = os.path.join(os.getcwd(), "I2M_R4.onnx")  # 绝对路径更稳定
+
+# 确保当前目录可写
 if not os.path.exists(model_path):
+    print("🔽 下载 ONNX 模型中...")
     urllib.request.urlretrieve(model_url, model_path)
+    print("✅ 模型下载完成：", model_path)
 
 
 st.set_page_config(page_title="Mol2SMILES Demo", layout="centered")
