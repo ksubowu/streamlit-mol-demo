@@ -3867,7 +3867,8 @@ def evaluate_x(model: torch.nn.Module, criterion: torch.nn.Module, postprocessor
         use_gpu=True if cv2.cuda.getCudaEnabledDeviceCount() > 0 else False)
 
         ocr2 = ocr2 = PaddleOCR(use_angle_cls=True,use_gpu =False,use_debug=False,
-                    rec_algorithm='SVTR_LCNet', rec_model_dir='/nfs_home/bowen/.paddleocr/whl/rec/en/en_PP-OCRv4_rec_infer',
+                    rec_algorithm='SVTR_LCNet',
+                    #   rec_model_dir='/nfs_home/bowen/.paddleocr/whl/rec/en/en_PP-OCRv4_rec_infer',
                     lang="en") 
         outcsv_filename=f"{output_directory}/{prefix_f}_withOCR.csv"
 
