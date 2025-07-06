@@ -16,6 +16,7 @@ if not os.path.exists(model_path):
     urllib.request.urlretrieve(model_url, model_path)
     print("✅ 模型下载完成：", model_path)
 
+assert os.path.exists(model_path), f'model download erro @dir:\n{model_path}'
 
 st.set_page_config(page_title="Mol2SMILES Demo", layout="centered")
 
